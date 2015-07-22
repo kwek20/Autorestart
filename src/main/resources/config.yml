@@ -1,0 +1,98 @@
+config:
+    ## The time is set by hours
+    time: 3
+    ## !!!! IMPORTANT !!!!
+    ## If your server is running under MultiCraft, set this to true!
+    ## Go into "Scheduled Tasks", and configure MultiCraft to restart the server, the same time your server will restart.
+    ## /autore pause, /autore start, /autore now, /autore reload, /autore in, and max-players feature will be disabled with MutliCraft.
+    ## Since these commands, and features alters the timer in AutoRestart as the MultiCraft timer is still running.
+    mutlicraft: false
+    ## Reminder is set by minutes
+    ## This will show how much time before the restart to notify players when the server
+    ## will restart!
+    reminder:
+    - 15
+    - 10
+    - 5
+    - 1
+    ## This is saying when should the plugin start counting down the seconds of a server restart?
+    ## This is not like the minute reminders, if you set to 5, start saying the second message
+    ## every second, STARTING AT 5 seconds before restart!
+    seconds-countdown: 5
+    ## Enable of Disable the reminders on the last seconds you have set!
+    remind-seconds: true
+    ## The configuration for chat messages
+    messages:
+        ## Prefix for broadcast, this is applied to (minutes, seconds, time, status, and change)
+        prefix: '&f[&7AutoRestart&f] &e'
+        ## %m - minutes
+        minutes: 'Server Will Restart In %m Minutes!'
+        ## %s - seconds
+        seconds: 'Server is restarting in %s Seconds!'
+        ## %h - hours, %m - minutes, %s - seconds
+        time: '&cServer restarting in &f%h&cH &f%m&cM &f%s&cS!'
+        change: '&cServer now is restarting in &f%h&cH &f%m&cM &f%s&cS!'
+        ## There are no tages for this section.
+        status:
+            start: '&cAutoRestart timer has been started!'
+            pause: '&cAutoRestart timer has been paused'
+        ## The shutdown message on when the server restarts.
+        ## Color codes now enabled! Use regular chat colors!
+        shutdown: '&cServer Restarting! We will be back up any minute!'
+    ## Enable or Disable the 1.8 versions Popups!
+    popup-enabled:
+        ## Show the pop ups on the minute reminders!
+        minutes: true
+        ## Show the pop ups on the last seconds of a server restart!
+        seconds: true
+        ## Show the pop ups when type /autore time
+        time: true
+        ## Show the pop ups when typed /autore start or /autore pause
+        status: true
+        ## Show the pop ups when the server time has been changed!
+        change: true
+    ## This section is for the customization of the popup messages! Enjoy!
+    popup-messages:
+        minutes: ## %m - minutes
+            title: '&cServer Restarting In'
+            subtitle: '&f%m &cMinutes!'
+        seconds: ## %s - seconds
+            title: '&cServer Restarting In'
+            subtitle: '&f%s &cSeconds!'
+        time: ## %h - hours, %m - minutes, %s - seconds
+            title: '&cServer Restarting In'
+            subtitle: '&f%h&cH &f%m&cM &f%s&cS!'
+        status: ## There are no tags for this section
+            start:
+                title: '&cAutoRestart has been started!'
+                subtitle: ''
+            pause:
+                title: '&cAutoRestart has been paused!'
+                subtitle: ''
+        change: ## %h - hours, %m - minutes, %s - seconds
+            title: '&cServer Restarting In'
+            subtitle: '&f%h&cH &f%m&cM &f%s&cS!'
+    ## This section will allow you to run Console Commands before a given amount of seconds
+    commands:
+        - '/place your commands'
+        - '/in this fasion'
+    ## This will allow you to enabled, or disable the last second commands.
+    commands-enabled: false
+    ## The amount of seconds your want the server to initiate the commands.
+    commands-time: 10
+    max-players:
+        ## This will stop your server from shutting down if you have more than X amount of players configured in "amount".
+        enabled: false
+        ## The max amount of players allow for a restart. If you set this to 10, and your server has 11 people online
+        ## your server will not shutdown until there is 10 or less amount of players.
+        amount: 10
+        ## The message broadcasted when too many players are online on restart!
+        ## %a - amount
+        message: '&bToo many players online for restart. Max &f%a&b amount of players allowed for a restart. Waiting till someone quits!'
+        ## This message appears when the amount of players are met after restart cancel!
+        ## %d - delay
+        shutdown: '&aServer now restarting in &f%d&a seconds!'
+        ## The delay for the server to restart after restart cancel. In seconds!
+        delay: 10
+## DO NOT CHANGE THIS!!!!
+version: 10
