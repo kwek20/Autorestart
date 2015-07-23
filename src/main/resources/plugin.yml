@@ -1,6 +1,6 @@
 name: AutoRestart
-version: 1.7.1
-## This is the version of the reimplementation of TitleManager.
+version: 1.8
+## This is the version of the reimplementation of the reimplementation of TitleManager.
 main: org.croniks.autorestart.core.Main
 author: ServersMC, DennisLysenko
 commands:
